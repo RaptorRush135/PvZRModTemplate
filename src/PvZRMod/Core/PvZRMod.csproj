@@ -20,10 +20,14 @@ internal static class ModInfo
   </PropertyGroup>
 
 	<Target Name="GenerateVersionFile" BeforeTargets="BeforeCompile;CoreCompile" Outputs="Metadata/ModInfo.g.cs">
-		<ItemGroup>
-			<FileWrites Include="Metadata/ModInfo.g.cs" />
-		</ItemGroup>
-		<WriteLinesToFile File="Metadata/ModInfo.g.cs" Lines="$(VersionFile)" WriteOnlyWhenDifferent="true" Overwrite="true" />
+    <PropertyGroup>
+      <GeneratedFilePath>Metadata/ModInfo.g.cs</GeneratedFilePath>
+    </PropertyGroup>
+    <ItemGroup>
+      <Compile Include="$(GeneratedFilePath)" />
+      <FileWrites Include="$(GeneratedFilePath)" />
+    </ItemGroup>
+    <WriteLinesToFile File="$(GeneratedFilePath)" Lines="$(VersionFile)" WriteOnlyWhenDifferent="true" Overwrite="true" />
 	</Target>
 
   <PropertyGroup>
