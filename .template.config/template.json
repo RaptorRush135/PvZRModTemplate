@@ -15,6 +15,20 @@
         "type": "project"
     },
     "preferNameDirectory": true,
+  "sources": [
+    {
+      "exclude": [
+        ".git/**",
+        ".template.config/**",
+        "**/bin/**",
+        "**/obj/**",
+        "**/.vs/**",
+        "**/*.g.cs",
+        "LICENSE",
+        "README.md"
+      ]
+    }
+  ],
     "symbols": {
         "ModAuthor": {
             "type": "parameter",
