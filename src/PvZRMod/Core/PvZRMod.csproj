@@ -30,9 +30,14 @@ internal static class ModInfo
     <PvzReDir Condition="'$(PvzReDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\PVZ Replanted</PvzReDir>
   </PropertyGroup>
 
-	<Target Name="CheckPvzReDir" BeforeTargets="BeforeBuild">
-		<Message Text="PvzReDir is: $(PvzReDir)" Importance="high" />
-	</Target>
+  <Target Name="ValidatePvzReDir" BeforeTargets="BeforeBuild">
+    <Error Condition="!Exists('$(PvzReDir)')" Text="PvzReDir '$(PvzReDir)' does not exist. Set PvzReDir to a valid installation path." />
+    <Error Condition="Exists('$(PvzReDir)') and !Exists('$(PvzReDir)\MelonLoader')" Text="MelonLoader folder not found under '$(PvzReDir)'. Ensure MelonLoader is installed." />
+  </Target>
+
+  <Target Name="PrintPvzReDir" BeforeTargets="BeforeBuild">
+    <Message Text="PvzReDir is: $(PvzReDir)" Importance="high" />
+  </Target>
 
   <ItemDefinitionGroup>
     <Reference>
