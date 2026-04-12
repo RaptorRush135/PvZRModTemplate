@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "RaptorRush135",
+    "classifications": [
+        "Games",
+        "MelonLoader"
+    ],
+    "identity": "RaptorRush.PvZRModTemplate",
+    "name": "PvZ Replanted Melon Mod",
+    "description": "A MelonLoader mod template for PvZ Replanted.",
+    "shortName": "pvzr-mod",
+    "sourceName": "PvZRMod",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "preferNameDirectory": true,
+    "symbols": {
+        "ModAuthor": {
+            "type": "parameter",
+            "datatype": "string",
+            "displayName": "Mod Author",
+            "description": "Author name for the mod",
+            "replaces": "ModAuthorValue",
+            "isRequired": true
+        }
+    }
+}
