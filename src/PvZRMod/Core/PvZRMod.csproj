@@ -7,13 +7,13 @@ namespace $(RootNamespace).Metadata%3B
 
 internal static class ModInfo
 {
-	public const string Name = nameof($(RootNamespace))%3B
+    public const string Name = nameof($(RootNamespace))%3B
 
-	public const string Version = "$(ModVersion)"%3B
+    public const string Version = "$(ModVersion)"%3B
 
-	public const string Author = "$(ModAuthor)"%3B
+    public const string Author = "$(ModAuthor)"%3B
 
-	public const string DownloadLink = "$(ModDownloadLink)"%3B
+    public const string DownloadLink = "$(ModDownloadLink)"%3B
 }
       ]]>
     </VersionFile>
