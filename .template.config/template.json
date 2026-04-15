@@ -23,7 +23,6 @@
         "**/bin/**",
         "**/obj/**",
         "**/.vs/**",
-        "**/*.g.cs",
         "LICENSE",
         "README.md"
       ]

@@ -19,16 +19,16 @@ internal static class ModInfo
     </VersionFile>
   </PropertyGroup>
 
-	<Target Name="GenerateVersionFile" BeforeTargets="BeforeCompile;CoreCompile" Outputs="Metadata/ModInfo.g.cs">
+  <Target Name="GenerateVersionFile" BeforeTargets="BeforeCompile;CoreCompile" Inputs="$(MSBuildAllProjects)" Outputs="$(IntermediateOutputPath)ModInfo.cs">
     <PropertyGroup>
-      <GeneratedFilePath>Metadata/ModInfo.g.cs</GeneratedFilePath>
+      <GeneratedFilePath>$(IntermediateOutputPath)ModInfo.cs</GeneratedFilePath>
     </PropertyGroup>
     <ItemGroup>
       <Compile Include="$(GeneratedFilePath)" />
       <FileWrites Include="$(GeneratedFilePath)" />
     </ItemGroup>
     <WriteLinesToFile File="$(GeneratedFilePath)" Lines="$(VersionFile)" WriteOnlyWhenDifferent="true" Overwrite="true" />
-	</Target>
+  </Target>
 
   <PropertyGroup>
     <PvzReDir Condition="'$(PvzReDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\PVZ Replanted</PvzReDir>
