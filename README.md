@@ -23,10 +23,19 @@
 
 ### Installation
 
+#### First install
+
 ```shell
 git clone https://github.com/RaptorRush135/PvZRModTemplate.git
 cd PvZRModTemplate
 dotnet new install ./
+```
+
+#### Update
+
+```shell
+git pull
+dotnet new install ./ --force
 ```
 
 ### Usage
@@ -48,6 +57,17 @@ Set the `PvzReDir` environment variable to point to your installation directory.
 
 ## Verify setup
 
+```
+📁 <PvZRModName>/
+├── 🔢 ...
+└── 📁 src/
+    └── 📁 <PvZRModName>/
+        ├── 🧩 <PvZRModName>.slnx
+        └── 📁 Core/
+            ├── 📄 Core.cs
+            └── ⚙️ <PvZRModName>.csproj
+```
+
 After generating the project, navigate to the `src/<PvZRModName>` directory and run:
 
 ```shell
@@ -57,3 +77,17 @@ dotnet build
 The build should complete successfully.
 
 On success, the built mod .dll will be automatically copied to the Mods directory.
+
+## Open in editors
+
+### 🟦 VS Code
+
+Open the project folder (`src/<PvZRModName>`) using one of the following:
+
+- Context menu: `Right-click the folder → Open with Code`
+
+- Command line: `code .`
+
+### 🟪 Visual Studio
+
+Open the solution by double-clicking: `<PvZRModName>.slnx`
