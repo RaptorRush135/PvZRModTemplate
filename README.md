@@ -1,41 +1,41 @@
 # 🌱 PvZRModTemplate
 
+[![NuGet](https://img.shields.io/nuget/v/RaptorRush135.PvZR.ModTemplate.svg)](https://www.nuget.org/packages/RaptorRush135.PvZR.ModTemplate)
+[![.NET](https://img.shields.io/badge/.NET-6.0-512BD4)](#)
+[![License](https://img.shields.io/github/license/RaptorRush135/PvZRModTemplate.svg)](LICENSE)
+
 > A template for creating MelonLoader mods for Plants vs. Zombies™: Replanted.
 
 ## Features
 
+- [PvZR.Sdk](https://github.com/RaptorRush135/PvZRSdk)
 - VSCode support
-- Common Polyfills
-- Generated ModInfo class
-- Auto copy dll to Mods folder
-- Release build script
 - `.gitignore`, `.gitattributes`, `.editorconfig`
-- Analyzers: `StyleCop`, `Sonar`, `Roslynator`
 
 ## Getting Started
 
 ### Prerequisites
 
-- 🧰 [Git](https://git-scm.com/)
 - 🧩 [.NET SDK](https://dotnet.microsoft.com/download), prefer latest stable (currently .NET 10 SDK)
 - 🎮 A copy of Plants vs. Zombies™: Replanted
-- 🍉 **[MelonLoader](https://github.com/LavaGang/MelonLoader)** - required mod loader.
+- 🍉 **[MelonLoader](https://github.com/LavaGang/MelonLoader)**, required mod loader.
 
-### Installation
+### Installation & Updates
 
-#### First install
+> [!WARNING]
+> **If you are updating from v1.0.0, uninstall the old template first.**
+>
+> Run the **Uninstall Command** shown by:
+>
+> ```shell
+> dotnet new uninstall
+> ```
+> After upgrading from **v1.0.0**, this manual uninstall is no longer necessary.
+
+Install or update the template with:
 
 ```shell
-git clone https://github.com/RaptorRush135/PvZRModTemplate.git
-cd PvZRModTemplate
-dotnet new install ./
-```
-
-#### Update
-
-```shell
-git pull
-dotnet new install ./ --force
+dotnet new install RaptorRush135.PvZR.ModTemplate
 ```
 
 ### Usage
