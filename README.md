@@ -48,7 +48,7 @@ dotnet new pvzr-mod -n PvZRModName --ModAuthor UserName
 ```
 
 > [!IMPORTANT]  
-> Read the [overview of PvZR.Sdk](https://github.com/RaptorRush135/PvZRSdk#overview)
+> To configure the build see [PvZR.Sdk](https://github.com/RaptorRush135/PvZRSdk).
 
 > [!WARNING]
 > **The default Replanted installation directory (`PvzReDir`) assumes a standard Windows Steam installation:**
