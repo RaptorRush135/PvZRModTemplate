@@ -11,9 +11,9 @@
     <MinVerDefaultPreReleaseIdentifiers>dev</MinVerDefaultPreReleaseIdentifiers>
   </PropertyGroup>
 
-  <Target Name="DisableZipVersionDotReplacementForPreRelease" AfterTargets="MinVer" Condition="'$(MinVerPreRelease)' != ''">
+  <Target Name="EnableZipVersionDotReplacementForStableRelease" AfterTargets="MinVer" Condition="'$(MinVerPreRelease)' == ''">
     <PropertyGroup>
-      <ModZipReplaceVersionDots>false</ModZipReplaceVersionDots>
+      <ModZipReplaceVersionDots>true</ModZipReplaceVersionDots>
     </PropertyGroup>
   </Target>
 
