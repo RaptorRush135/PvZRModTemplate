@@ -17,7 +17,7 @@
 ### Prerequisites
 
 - 🧰 [Git](https://git-scm.com/)
-- 🧩 [.NET SDK](https://dotnet.microsoft.com/download), prefer latest stable (currently .NET 10 SDK)
+- 🧩 [.NET SDK](https://dotnet.microsoft.com/download), prefer latest stable (currently .NET 11 SDK)
 - 🎮 A copy of Plants vs. Zombies™: Replanted
 - 🍉 **[MelonLoader](https://github.com/LavaGang/MelonLoader)**, required mod loader.
 
